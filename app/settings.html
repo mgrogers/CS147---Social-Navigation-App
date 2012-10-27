@@ -1,43 +1,20 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>
-        </title>
-        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.1.1/jquery.mobile-1.1.1.min.css" />
-        <link rel="stylesheet" href="my.css" />
-        <style>
-            /* App custom styles */
-        </style>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js">
-        </script>
-        <script src="https://ajax.aspnetcdn.com/ajax/jquery.mobile/1.1.1/jquery.mobile-1.1.1.min.js">
-        </script>
-        <script src="my.js">
-        </script>
+        <title>Settings</title>
+		<meta charset="utf-8">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+		<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
     </head>
     <body>
         <!-- Home -->
-        <div data-role="page" id="page1">
-            <div data-theme="b" data-role="header">
-                <h3>
-                    social GPS
-                </h3>
-                <div data-role="navbar" data-iconpos="top">
-                    <ul>
-                        <li>
-                            <a href="index.html" data-theme="b" data-icon="search">
-                                Choose Destination
-                            </a>
-                        </li>
-                        <li>
-                            <a href="settings.html" data-theme="a" data-icon="gear">
-                                Settings
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+        <div data-role="page" id="settings">
+            <div data-theme="a" data-role="header">
+                <h1>social GPS</h1>
+				<a href="index.html" data-icon="home">back</a>
             </div>
             <div data-role="content">
                 <div data-role="fieldcontain">
@@ -48,44 +25,32 @@
                         <input type="range" name="slider" value="5" min="0" max="15" data-highlight="false" data-theme="d" />
                     </fieldset>
                 </div>
-                <h1>
-                </h1>
-                <div id="checkboxes3" data-role="fieldcontain">
+                
+                <div id="checkboxes_avoid" data-role="fieldcontain">
                     <fieldset data-role="controlgroup" data-type="vertical">
-                        <legend>
-                            When navigating, avoid:
-                        </legend>
+                        <legend>When navigating, avoid:</legend>
                         <input id="checkbox3" name="Tolls" type="checkbox" />
-                        <label for="checkbox3">
-                            Tolls
-                        </label>
+                        <label for="checkbox3">Tolls</label>
+						
                         <input id="checkbox4" name="" type="checkbox" />
-                        <label for="checkbox4">
-                            Highways
-                        </label>
+                        <label for="checkbox4">Highways</label>
+						
                         <input id="checkbox8" name="" type="checkbox" />
-                        <label for="checkbox8">
-                            Traffic
-                        </label>
+                        <label for="checkbox8">Traffic</label>
                     </fieldset>
                 </div>
-                <div id="checkboxes4" data-role="fieldcontain">
+                <div id="checkboxes_suggest" data-role="fieldcontain">
                     <fieldset data-role="controlgroup" data-type="vertical">
-                        <legend>
-                            When making a stop, suggest:
-                        </legend>
+                        <legend>When making a stop, suggest:</legend>
+						
                         <input id="checkbox5" name="Gas Stations" type="checkbox" />
-                        <label for="checkbox5">
-                            Gas Stations
-                        </label>
+                        <label for="checkbox5">Gas Stations</label>
+						
                         <input id="checkbox6" name="Food" type="checkbox" />
-                        <label for="checkbox6">
-                            Food
-                        </label>
+                        <label for="checkbox6">Food</label>
+						
                         <input id="checkbox7" name="Misc." type="checkbox" />
-                        <label for="checkbox7">
-                            Misc.
-                        </label>
+                        <label for="checkbox7">Misc.</label>
                     </fieldset>
                 </div>
             </div>
