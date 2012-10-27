@@ -50,6 +50,8 @@
 						$("#searchbar").live("change", function(event, ui) {
 							search();
 							});
+							
+							
 						function search() {
 							for (var i = 0; i < markersArray.length; i++ ) {
 								markersArray[i].setMap(null);
@@ -62,6 +64,7 @@
 							};
 							service.textSearch(request, callback);
 						 }
+						 
 						 function callback(results, status) {
 							var bounds = new google.maps.LatLngBounds();
 						  if (status == google.maps.places.PlacesServiceStatus.OK) {
