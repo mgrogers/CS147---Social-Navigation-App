@@ -48,16 +48,14 @@
 						
 						
 						
-						function success(position) {
-						  						  
+						function success(position) {				  
 						 	$('#status').html("");
 						 	
-			  
 						  	var options={
       							elt:document.getElementById('map'), /*ID of element on the page where you want the map added*/ 
-      						  	zoom:10,                                  /*initial zoom level of the map*/ 
-    					    	latLng:{lat:37.428412, lng:-122.169597},  /*center on loc */ 
-  						     	mtype:'map',                              /*map type (map)*/ 
+      						  	zoom:13,                                  /*initial zoom level of the map*/ 
+    					    	latLng:{lat:position.coords.latitude, lng:position.coords.longitude},  /*center on loc */ 
+  						     	mtype:'osm',                              /*map type (map)*/ 
 					       	    bestFitMargin:0,          /*margin offset from the map viewport when applying a bestfit on shapes*/ 
        							zoomOnDoubleClick:true                    /*zoom in when double-clicking on map*/ 
     						};
@@ -66,7 +64,7 @@
 						  	window.map = new MQA.TileMap(options);
 						  	
 						  	/*Using the MQA.Poi constructor*/ 
-  						var info=new MQA.Poi({lat:37.428412,lng:-122.169597});
+  						var info=new MQA.Poi({lat:position.coords.latitude,lng:position.coords.longitude});
  
   						info.setInfoContentHTML('Stanford University');
 
@@ -74,10 +72,10 @@
   						map.addShape(info);
 						  	
 						  
-						 MQA.withModule('largezoom','traffictoggle','viewoptions','geolocationcontrol','insetmapcontrol','mousewheel', function() {
+						 MQA.withModule('smallzoom','traffictoggle','viewoptions','geolocationcontrol','insetmapcontrol','mousewheel', function() {
 	
    						 map.addControl(
-    					  new MQA.LargeZoom(),
+    					  new MQA.SmallZoom(),
 			    		  new MQA.MapCornerPlacement(MQA.MapCorner.TOP_LEFT, new MQA.Size(5,5))
   						  );
 		
@@ -105,9 +103,7 @@
 
   					    map.enableMouseWheelZoom();
   					    
-  					    navigator.geolocation.getCurrentPosition(function(position) {
-    				 	  map.setCenter({lat: position.coords.latitude, lng: position.coords.longitude});
-   					  	});
+  					    
   					    
   						});
   						
