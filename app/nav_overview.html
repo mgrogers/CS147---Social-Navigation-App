@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Group Navigation Overview</title>
+		<meta charset="utf-8">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="viewport" content="width=device-width, initial-scale=1"> 
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+		<script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+		<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+    </head>
+    <body>
+        <div data-role="page" id="waitReplies" data-theme="a">
+            <div data-theme="a" data-role="header">
+                <a href="index.html" data-theme="c" data-icon="back">Cancel</a>
+				<h1>GrouPS</h1>
+            </div>
+			
+            <div data-role="content">
+				<a href="#confirmStart" data-theme="b" data-rel="popup" data-position-to="window" data-role="button"  data-transition="flow">Navigate!</a>
+				<ol data-role="listview" data-inset="true">
+					<li>
+						<h3>Andy Elder</h3>
+						<p class="ui-li-aside"><strong>15 Minutes Behind</strong></p>
+						<p><strong>Travelling to destination</strong></p>
+						<p>Andy is currently 15 Minutes behind and has begun his navigation.</p>
+					</li>
+					<li>
+						<h3>Arjun Mathur (You)</h3>
+						<p><strong>Boston Conference Planning</strong></p>
+						<p>In preparation for the upcoming conference in Boston, we need to start gathering a list of sponsors and speakers.</p>
+						<p class="ui-li-aside"><strong>9:18</strong>AM</p>
+					</li>
+				</ol>
+            </div>
+        </div>
+        <script>
+            //App custom javascript
+        </script>
+    </body>
+</html>
